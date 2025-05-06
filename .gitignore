@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database files - except needed ones
+*.db
+!users.db
+*.sqlite3
+
+# Environment Variables
+.env
+
+# Large files
+embeddings/
+
+# OS specific files
+.DS_Store
+Thumbs.db 

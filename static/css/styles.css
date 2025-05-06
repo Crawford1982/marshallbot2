@@ -1,0 +1,84 @@
+/* static/css/styles.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.company-logo {
+  width: 150px;
+  height: auto;
+}
+
+h2 {
+  color: #333;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.flash-messages {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/* Chatbox Styles */
+#chatbox {
+  width: 600px;
+  margin-top: 20px;
+}
+
+#messages {
+  border: 1px solid #ccc;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-message {
+  text-align: right;
+  margin: 5px;
+  padding: 5px;
+  background-color: #dcf8c6;
+  border-radius: 5px;
+}
+
+.bot-message {
+  text-align: left;
+  margin: 5px;
+  padding: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+#user_input {
+  width: 500px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 15px;
+}

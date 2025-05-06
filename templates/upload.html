@@ -1,0 +1,42 @@
+<!-- templates/upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/image.png') }}"
+      type="image/png"
+    />
+    <img
+      src="{{ url_for('static', filename='images/image1.png') }}"
+      alt="Company Logo"
+      class="company-logo"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Upload Document - MarshallsBot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Upload Document</h2>
+    <nav>
+      <a href="{{ url_for('chatbot') }}">Back to Chatbot</a> |
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="flash-messages">
+      {% for message in messages %}
+      <p class="success">{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+      <label>Select document to upload:</label><br />
+      <input type="file" name="document" accept=".txt,.pdf,.docx" /><br /><br />
+      <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>

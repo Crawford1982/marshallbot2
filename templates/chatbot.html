@@ -1,0 +1,41 @@
+<!-- templates/chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/image.png') }}"
+      type="image/png"
+    />
+    <img
+      src="{{ url_for('static', filename='images/image1.png') }}"
+      alt="Company Logo"
+      class="company-logo"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Chatbot - MarshallsBot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+  </head>
+  <body>
+    <h2>Welcome, {{ current_user.username }}</h2>
+    <nav>
+      <a href="{{ url_for('upload') }}">Upload Documents</a> |
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <div id="chatbox">
+      <div id="messages"></div>
+      <input
+        type="text"
+        id="user_input"
+        placeholder="Type your message here..."
+        autocomplete="off"
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </body>
+</html>
